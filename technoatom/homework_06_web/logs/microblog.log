@@ -1,0 +1,5 @@
+2019-10-28 15:44:09,112 INFO: App startup [in run.py:24]
+2019-10-28 15:44:12,564 INFO: Have done the http://localhost:5000/todo/api/flights with POST method for 0.00041 [in /Users/mac/PycharmProjects/AppliedPythonF2019/homeworks/homework_06_web/app/module/api.py:21]
+2019-10-28 15:44:12,570 INFO: Have done the http://localhost:5000/todo/api/flights with GET method for 0.00017 [in /Users/mac/PycharmProjects/AppliedPythonF2019/homeworks/homework_06_web/app/module/api.py:21]
+2019-10-28 15:44:12,576 INFO: Have done the http://localhost:5000/todo/api/flights/1 with PUT method for 0.00031 [in /Users/mac/PycharmProjects/AppliedPythonF2019/homeworks/homework_06_web/app/module/api.py:21]
+2019-10-28 15:44:12,582 INFO: Have done the http://localhost:5000/todo/api/flights/2 with DELETE method for 0.00007 [in /Users/mac/PycharmProjects/AppliedPythonF2019/homeworks/homework_06_web/app/module/api.py:21]
