@@ -41,7 +41,7 @@ def main():
         add(args.key, args.val)
         print("add to storage {} with key {}".format(args.val, args.key))
     elif args.key:
-        print(find(args.key))
+        print(", ".join(find(args.key)))
         print("find in storage with key {}".format(args.key))
     else:
         print('Wrong command')
