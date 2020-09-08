@@ -14,7 +14,7 @@ def make_report(db, config):
 
 
 def write_csv(filename, rows, title):
-    with open(filename, 'w') as f:
+    with open("../" + filename, 'w') as f:
         writer = csv.writer(f, delimiter=',')
         writer.writerow(title)
         writer.writerows(rows)

@@ -4,7 +4,7 @@ import pdb
 
 class Database:
     def __init__(self):
-        self.connector = sqlite3.connect("/Users/mac/programming/PycharmProjects/de_test/de_test.db")
+        self.connector = sqlite3.connect("/path/to/file/de_test.db")
         self.cursor = self.connector.cursor()
 
     def execute_request(self, request):
