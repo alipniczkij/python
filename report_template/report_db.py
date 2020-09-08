@@ -4,7 +4,7 @@ import pdb
 
 class Database:
     def __init__(self):
-        self.connector = sqlite3.connect("/path/to/file/de_test.db")
+        self.connector = sqlite3.connect("/Users/mac/programming/PycharmProjects/de_test/de_test.db")
         self.cursor = self.connector.cursor()
 
     def execute_request(self, request):
@@ -34,12 +34,12 @@ class Config:
         self._select = ""
         self._from_tables = ""
         self._where = ""
-        self._aggregation = ""
-        self.select()
+        self._group = ""
         self.from_tables()
         self.where()
-        self.aggregation()
-        self.request = "{} {} {} {}".format(self._select, self._from_tables, self._where, self._aggregation).strip(", ")
+        self.group()
+        self.select()
+        self.request = "{} {} {} {}".format(self._select, self._from_tables, self._where, self._group).strip(", ")
 
     def select(self):
         self._select = "SELECT "
@@ -82,11 +82,11 @@ class Config:
                                                                               self.period["date_from"],
                                                                               self.period["date_to"], )
 
-    def aggregation(self):
-        self._aggregation = "GROUP BY product_names.brand, "
+    def group(self):
+        self._group = "GROUP BY product_names.brand, "
         if self.sections["receipt_date"]:
-            self._aggregation += "sales.receipt_date, "
+            self._group += "sales.receipt_date, "
         if self.sections["region"]:
-            self._aggregation += "kkt_info.region, "
+            self._group += "kkt_info.region, "
         if self.sections["channel"]:
-            self._aggregation += "kkt_info.shop_id, "
+            self._group += "kkt_info.shop_id, "
